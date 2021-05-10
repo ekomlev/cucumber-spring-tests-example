@@ -9,12 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 @RunWith(Cucumber.class)
 @CucumberOptions(
     plugin = {"json:target/cucumber.json", "pretty"},
-//    features = {"classpath:Open_Github_Google.feature"},
-//    features = {"classpath:Open_Github_Google.feature"},
-        features = {"src/test/resources/features"},
-//    features = "src/test/features/smoke",
+    features = {"src/test/resources/features"},
     glue = "com.eduard",
-      tags = "@test"
+    tags = "@test"
 )
 @Slf4j
 public class CucumberRunnerTest {

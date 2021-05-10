@@ -15,8 +15,7 @@ import io.cucumber.java.Before;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Import({DriverConfig.class})
-//@ComponentScan("com.eduard")
+@Import(DriverConfig.class)
 public class Hooks {
   @Autowired
   private Driver driver;

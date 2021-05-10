@@ -25,11 +25,11 @@ public class DriverConfig {
   @ConditionalOnExpression("'chrome'.equals('${browser.type}')")
   @ScenarioScope
   public Driver chromeDriver(DriverProperties driverProps) {
-    Driver dr = new ChromeDriver(driverProps);
+    Driver driver = new ChromeDriver(driverProps);
 
     log.info("-->> chromeDriver CREATING. Thread ID - {}. CHROME INSTANCE - {}.",
-        Thread.currentThread().getId(), dr.hashCode());
+        Thread.currentThread().getId(), driver.hashCode());
 
-    return dr;
+    return driver;
   }
 }

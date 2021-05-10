@@ -13,13 +13,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Lazy
 @Configuration
-@ComponentScan({"com.eduard.component.pojo"})
+@ComponentScan("com.eduard.component.pojo")
 public class UserConfig {
   @Bean
   @ScenarioScope
   public User user() {
     User user = new User("John Wick", 22);
     log.info("User {} is created", user);
+
     return user;
   }
 }
