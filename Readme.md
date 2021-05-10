@@ -1,4 +1,6 @@
-#Overview
+# Cucumber-Spring Test Framework example
+
+## Stack
 
 Stack:
 - Java 11
@@ -8,12 +10,16 @@ Stack:
 - Cucumber 6
 - Junit 4
 
+## Overview
 In this example it is shown how Cucumber works with Spring.<br>
 Parallel execution is possible with the help of `maven-surefire-plugin`.<br>
-Also it's not possible to use Spring autowire in Unit test (see `src/tests/UserUnitTest`) when Cucumber context is not running. `@ScenarioScope` annotation is used in com.eduard.config to define bean scope.
+Also it's not possible to use Spring autowire in Unit test (see `src/unitTests/UserTest`) when Cucumber context is not running. `@ScenarioScope` annotation is used in com.eduard.config to define bean scope.
 Spring context doesn't know about it.
 <br><br>
-To run in parallel:
+
+## Run
+1. Execute `com.eduard.runners.CucumberRunnerTest`
+2. To run in parallel, us command line:
 ```
 mvn clean test -DthreadCount=2 -Dbrowser.type=chrome
 ```

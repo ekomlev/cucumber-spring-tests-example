@@ -1,4 +1,4 @@
-package tests;
+package unitTests;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,7 +9,7 @@ import com.eduard.component.pojo.User;
 // It's not possible here to use Spring autowire here because of @ScenarioScope annotation in com.eduard.config.
 // @ScenarioScope is Cucumber context annotation. Spring context doesn't know about it. But Cucumber context doesn't run here.
 // @RunWith(SpringJUnit4ClassRunner.class) won't help.
-public class UserUnitTest {
+public class UserTest {
   private User user;
 
   @Before
