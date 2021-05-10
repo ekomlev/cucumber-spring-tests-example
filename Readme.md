@@ -19,7 +19,7 @@ Spring context doesn't know about it.
 
 ## Run
 1. Execute `com.eduard.runners.CucumberRunnerTest`
-2. To run in parallel, us command line:
+2. To run in parallel, use command line:
 ```
 mvn clean test -DthreadCount=2 -Dbrowser.type=chrome
 ```
